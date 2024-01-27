@@ -1,10 +1,11 @@
-'use client'
+"use client";
 
 import { Button } from "./MaterialTailwind";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useState } from "react";
 import MenuOverLay from "./components/MenuOverlay";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -24,19 +25,23 @@ const Navbar = () => {
         </Link>
         <div className="block md:hidden">
           {!navbarOpen ? (
-            <button
+            <motion.button
               onClick={() => setNavbarOpen(true)}
               className="flex items-center px-2 py-1 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-slate-200"
+              whileTap={{ scale: 1.3 }}
+              transition={{ duration: 1.3, ease: "easeInOut" }}
             >
               <Bars3Icon className="h-6 w-6" />
-            </button>
+            </motion.button>
           ) : (
-            <button
+            <motion.button
               onClick={() => setNavbarOpen(false)}
               className="flex items-center px-2 py-1 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-slate-200"
+              whileTap={{ scale: 1.3 }}
+              transition={{ duration: 1.3, ease: "easeInOut" }}
             >
               <XMarkIcon className="h-6 w-6" />
-            </button>
+            </motion.button>
           )}
         </div>
 
