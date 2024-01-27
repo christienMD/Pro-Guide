@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./Navbar";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,11 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
         <main className="bg-[#fcfcfc]">{children}</main>
 
-        <Script src="node_modules/@material-tailwind/html@latest/scripts/dialog.js"></Script>
-        <Script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></Script>
+        <Script src="/scripts/dialog.js" strategy="beforeInteractive"></Script>
       </body>
     </html>
   );
