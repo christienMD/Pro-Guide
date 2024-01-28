@@ -24,7 +24,8 @@ const SignInBtn = () => {
           event.preventDefault();
           dispatch({ type: "SIGNIN", username: userName });
           router.push("/pages/home");
-          console.log("Username:", userName);
+          router.refresh()
+        //   console.log("Username:", userName);
         }}
         data-dialog-backdrop="sign-up-dialog"
         data-dialog-backdrop-close="true"
