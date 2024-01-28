@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import MenuOverLay from "./components/MenuOverlay";
 import { motion } from "framer-motion";
+import Logo from "./components/Logo";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -18,11 +19,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="flex justify-between space-x-5 md:space-x-10 border-b px-5 h-16 items-center bg-white fixed top-0 right-0 left-0 z-10">
-        <Link href="/" className="whitespace-nowrap font-extrabold text-xl">
-          <span className="text-2xl text-blue-600">P</span>ro {""}
-          <span className="text-2xl text-blue-600 ps-1">G</span>
-          <span className="text-blue-600">uide</span>
-        </Link>
+        <Logo />
         <div className="block md:hidden">
           {!navbarOpen ? (
             <motion.button
@@ -52,7 +49,7 @@ const Navbar = () => {
                 <Button
                   placeholder=""
                   variant="text"
-                  className=" hover:text-blue-600 font-light tracking-widest text-gray-500 capitalize"
+                  className=" hover:text-blue-600 text-md font-thin tracking-widest text-zinc-400 capitalize"
                   color="blue"
                 >
                   Home

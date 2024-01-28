@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import {
   Button,
   Card,
@@ -7,6 +9,8 @@ import {
 } from "../MaterialTailwind";
 
 const QuizStarterCard = () => {
+  const router = useRouter();
+
   return (
     <Card className="max-w-3xl lg:max-w-5xl px-5 pt-5 pb-10" placeholder="">
       <CardBody placeholder="">
@@ -39,6 +43,7 @@ const QuizStarterCard = () => {
               </svg>
               ~15 min
             </button>
+            {/* starter quiz modal */}
             <button
               className="select-none px-8 py-2 rounded-lg bg-gradient-to-tr from-blue-800 to-blue-700 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               data-ripple-light="true"
@@ -110,6 +115,7 @@ const QuizStarterCard = () => {
                     Cancel
                   </button>
                   <button
+                    onClick={() => router.push("/pages/quiz")}
                     className="select-none px-6 py-3 rounded-lg bg-gradient-to-tr from-blue-800 to-blue-700 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     data-ripple-light="true"
                     data-dialog-target="animated-dialog"
