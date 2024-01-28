@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="flex justify-between space-x-5 md:space-x-10 border-b px-5 h-16 items-center bg-white fixed top-0 right-0 left-0 z-10">
-        <Logo />
+        <Logo href="/pages/home"/>
         <div className="block md:hidden">
           {!navbarOpen ? (
             <motion.button

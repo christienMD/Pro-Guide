@@ -63,7 +63,7 @@ const QuizPage = () => {
   return (
     <div className="flex flex-col md:flex-row container mx-auto md:p-5">
       <div className="md:w-6/12 flex flex-col gap-5">
-        <Logo />
+        <Logo href="/pages/home"/>
         <div className="flex gap-14 items-center ms-5 mt-5">
           <FaPersonDotsFromLine size={40} className="" />
           <h2 className="font-light text-4xl">

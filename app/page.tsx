@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <div className="h-screen bg-[#fcfcfc] flex flex-col justify-center items-center">
       <nav className="absolute top-0 left-0 right-0 px-3 h-14 bg-white border-b flex items-center justify-between">
-        <Logo />
+        <Logo href="/"/>
         <div className="flex gap-2">
           <SignInBtn />
         </div>
