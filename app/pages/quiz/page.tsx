@@ -43,7 +43,7 @@ const QuizPage = () => {
       answer
         ? {
             ...prev,
-            score: prev.score + 10,
+            score: prev.score + 20,
             correctAnswers: prev.correctAnswers + 1,
           }
         : {
@@ -70,7 +70,7 @@ const QuizPage = () => {
             {timeExpired ? "Time Out" : `2 / 5 minutes`}
           </h2>
         </div>
-        {!showResults || timeExpired ? (
+        {!showResults ? (
           <div className="flex flex-col mt-5 ps-5">
             <h2 className="font-semibold text-2xl">Pro Guid Experience</h2>
             <div className="text-zinc-400 font-lg">
@@ -86,7 +86,7 @@ const QuizPage = () => {
       </div>
 
       <div className="md:w-6/12 h-screen border-y-2 border-x-2 p-10">
-        {!showResults || timeExpired ? (
+        {!showResults ? (
           <>
             <div className="flex items-center gap-2 md:gap-4 justify-around">
               <div>Select One answer</div>

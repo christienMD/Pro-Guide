@@ -20,8 +20,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="bg-[#fcfcfc]">{children}</main>
 
-        {/* <Script src="/scripts/dialog.js" strategy="beforeInteractive"></Script> */}
-        <Script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></Script>
+        <Script src="/scripts/dialog.js" strategy="beforeInteractive"></Script>
+        {/* <Script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></Script> */}
       </body>
     </html>
   );

@@ -16,7 +16,7 @@ const Timer = ({ totalTime, onTimeout }: { totalTime: number; onTimeout: () => v
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [totalTime]);
+  }, [totalTime, onTimeout]);
 
   const minutes = Math.floor(secondsLeft / 60);
   const seconds = secondsLeft % 60;

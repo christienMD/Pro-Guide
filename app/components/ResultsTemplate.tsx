@@ -43,7 +43,7 @@ const ResultsTemplate = ({ score, correctAnswers }: Props) => {
               </td>
               <td className="p-4">
                 <p className="block font-sans text-lg antialiased font-normal leading-normal text-blue-gray-900">
-                  {score} / 50
+                  {score} / 100
                 </p>
               </td>
               <td className="p-4">
