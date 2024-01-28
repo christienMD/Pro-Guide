@@ -87,7 +87,7 @@ const QuizPage = () => {
         )}
       </div>
 
-      <div className="md:w-6/12 h-screen border-y-2 border-x-2 p-10 md:mt-1 mt-10">
+      <div className="md:w-6/12 h-screen border-y-2 border-x-2 md:p-10 p-3 md:mt-1 mt-10">
         {!showResults ? (
           <>
             <div className="md:flex items-center gap-2 md:gap-4 justify-around">
