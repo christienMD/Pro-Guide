@@ -23,8 +23,8 @@ export default function RootLayout({
           <main className="bg-[#fcfcfc]">{children}</main>
         </ContextProvider>
 
-        <Script src="/scripts/dialog.js" strategy="beforeInteractive"></Script>
-        {/* <Script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></Script> */}
+        {/* <Script src="/scripts/dialog.js" strategy="beforeInteractive"></Script> */}
+        <Script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></Script>
       </body>
     </html>
   );

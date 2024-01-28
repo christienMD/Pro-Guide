@@ -62,8 +62,10 @@ const QuizPage = () => {
 
   return (
     <div className="flex flex-col md:flex-row container mx-auto md:p-5">
-      <div className="md:w-6/12 flex flex-col gap-5">
-        <Logo href="/pages/home"/>
+      <div className="md:w-6/12 flex flex-col gap-5 ">
+        <div className="ps-4 mt-0">
+          <Logo href="/pages/home" />
+        </div>
         <div className="flex gap-14 items-center ms-5 mt-5">
           <FaPersonDotsFromLine size={40} className="" />
           <h2 className="font-light text-4xl">
@@ -85,25 +87,28 @@ const QuizPage = () => {
         )}
       </div>
 
-      <div className="md:w-6/12 h-screen border-y-2 border-x-2 p-10">
+      <div className="md:w-6/12 h-screen border-y-2 border-x-2 p-10 md:mt-1 mt-10">
         {!showResults ? (
           <>
-            <div className="flex items-center gap-2 md:gap-4 justify-around">
-              <div>Select One answer</div>
-              <div className="text-3xl font-light">
-                <Timer totalTime={150} onTimeout={handleTimeout} />
+            <div className="md:flex items-center gap-2 md:gap-4 justify-around">
+              <div className="whitespace-nowrap text-lg">Select One answer</div>
+              <div className="flex items-center gap-2 md:gap-4 justify-around mt-5 md:mt-0">
+                <div className="text-3xl font-light">
+                  <Timer totalTime={150} onTimeout={handleTimeout} />
+                </div>
+                <Button
+                  className="whitespace-nowrap"
+                  placeholder=""
+                  onClick={handleOnclickNext}
+                  disabled={selectedAnswerIndex === null || timeExpired}
+                >
+                  {timeExpired
+                    ? "Time out"
+                    : currentQuestion === questions.length - 1
+                    ? "Finish"
+                    : "Next question"}
+                </Button>
               </div>
-              <Button
-                placeholder=""
-                onClick={handleOnclickNext}
-                disabled={selectedAnswerIndex === null || timeExpired}
-              >
-                {timeExpired
-                  ? "Time out"
-                  : currentQuestion === questions.length - 1
-                  ? "Finish"
-                  : "Next question"}
-              </Button>
             </div>
             <div className="mt-10">
               {choices.map((choice, index) => (

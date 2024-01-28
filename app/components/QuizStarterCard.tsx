@@ -47,7 +47,7 @@ const QuizStarterCard = () => {
             </div>
             {/* starter quiz modal */}
             <button
-              // onClick={() => router.push("/pages/quiz")}
+              // onClick={() => router.push('/pages/quiz')}
               className="select-none px-8 py-2 rounded-lg bg-gradient-to-tr from-blue-800 to-blue-700 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               data-ripple-light="true"
               data-dialog-target="animate-dialog"
@@ -121,7 +121,7 @@ const QuizStarterCard = () => {
                     onClick={() => router.push("/pages/quiz")}
                     className="select-none px-6 py-3 rounded-lg bg-gradient-to-tr from-blue-800 to-blue-700 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     data-ripple-light="true"
-                    data-dialog-target="animatet-dialog"
+                    data-dialog-target="animated-dialog"
                   >
                     <div className="flex items-center gap-2">
                       <svg
