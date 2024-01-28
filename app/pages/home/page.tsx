@@ -2,8 +2,7 @@ import Navbar from "@/app/Navbar";
 import BlueSection from "@/app/components/ActionSection";
 import QuizStarterCard from "@/app/components/QuizStarterCard";
 
-
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Navbar />
@@ -15,4 +14,8 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;
+
+export const dynamic = "force-dynamic";
