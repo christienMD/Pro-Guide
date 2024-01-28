@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import ContextProvider from "./ContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="bg-[#fcfcfc]">{children}</main>
+        <ContextProvider>
+          <main className="bg-[#fcfcfc]">{children}</main>
+        </ContextProvider>
 
         <Script src="/scripts/dialog.js" strategy="beforeInteractive"></Script>
         {/* <Script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></Script> */}

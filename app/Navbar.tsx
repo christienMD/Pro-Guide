@@ -3,12 +3,16 @@
 import { Button } from "./MaterialTailwind";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MenuOverLay from "./components/MenuOverlay";
 import { motion } from "framer-motion";
 import Logo from "./components/Logo";
+import AuthContext from "./contexts/authContext";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
+  console.log("user: ", user);
+
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navLinks = [
     { label: "Home", path: "/" },
@@ -67,7 +71,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className="me-8">Profile</div>
+          <div className="me-8 font-lg text-black">{user}</div>
         </div>
       </nav>
 
